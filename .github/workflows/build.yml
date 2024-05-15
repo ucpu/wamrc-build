@@ -25,7 +25,6 @@ jobs:
 
     - name: wamrc
       run: |
-        cd wamr/wamr-compiler
         mkdir build
         cd build
         cmake ..
@@ -37,7 +36,7 @@ jobs:
         name: wamrc-linux
         compression-level: 9
         path: |
-          wamr/wamr-compiler/build/wamrc
+          build/wamr/wamr-compiler/wamrc
 
   windows:
     name: windows
@@ -64,7 +63,6 @@ jobs:
     - name: wamrc
       shell: bash
       run: |
-        cd wamr/wamr-compiler
         mkdir build
         cd build
         cmake ..
@@ -76,4 +74,4 @@ jobs:
         name: wamrc-windows
         compression-level: 9
         path: |
-          wamr/wamr-compiler/build/Release/wamrc.exe
+          build/wamr/wamr-compiler/Release/wamrc.exe
